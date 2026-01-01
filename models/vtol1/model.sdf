@@ -246,11 +246,11 @@
     <link name="lidar_sensor_link">
       <pose relative_to="base_link">0 0 0.15 0 0 0</pose>
       <inertial>
-        <mass>0.15</mass>
+        <mass>0.83</mass>
         <inertia>
-          <ixx>0.00002</ixx>
-          <iyy>0.00002</iyy>
-          <izz>0.00002</izz>
+          <ixx>0.000908</ixx>
+          <iyy>0.000908</iyy>
+          <izz>0.001104</izz>
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyz>0</iyz>
@@ -260,8 +260,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.045</radius>
-            <length>0.07</length>
+            <radius>0.0516</radius>
+            <length>0.0717</length>
           </cylinder>
         </geometry>
       </collision>
@@ -269,8 +269,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.045</radius>
-            <length>0.07</length>
+            <radius>0.0516</radius>
+            <length>0.0717</length>
           </cylinder>
         </geometry>
         <material>
@@ -279,14 +279,15 @@
         </material>
       </visual>
 
-      <!-- Attach the lidar sensor to this link so beams + a body are visible -->
+      <!-- VLP-16 Lidar Sensor -->
       <sensor name="lidar_vlp16" type="gpu_lidar">
         <gz_frame_id>lidar_sensor_link</gz_frame_id>
         <pose>0 0 0 0 0 0</pose>
-        <always_on>1</always_on>
+        <topic>/velodyne_points</topic>
         <update_rate>10</update_rate>
-        <topic>/lidar_vlp16/points</topic>
-        <ray>
+        <always_on>true</always_on>
+        <visualize>false</visualize>
+        <lidar>
           <scan>
             <horizontal>
               <samples>1800</samples>
@@ -302,17 +303,16 @@
             </vertical>
           </scan>
           <range>
-            <min>0.3</min>
-            <max>130.0</max>
-            <resolution>0.01</resolution>
+            <min>0.5</min>
+            <max>100.0</max>
+            <resolution>0.003</resolution>
           </range>
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.008</stddev>
+            <stddev>0.01</stddev>
           </noise>
-        </ray>
-        <visualize>true</visualize>
+        </lidar>
       </sensor>
     </link>
 
