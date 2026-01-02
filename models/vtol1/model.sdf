@@ -239,11 +239,11 @@
     <!-- Lidar physical link + fixed joint so it renders as a cylinder -->
     <joint name="lidar_sensor_joint" type="fixed">
       <parent>base_link</parent>
-      <child>lidar_sensor_link</child>
+      <child>velodyne</child>
       <pose relative_to="base_link">0 0 0.15 0 0 0</pose>
     </joint>
 
-    <link name="lidar_sensor_link">
+    <link name="velodyne">
       <pose relative_to="base_link">0 0 0.15 0 0 0</pose>
       <inertial>
         <mass>0.83</mass>
@@ -273,6 +273,7 @@
             <length>0.0717</length>
           </cylinder>
         </geometry>
+
         <material>
           <ambient>0.1 0.1 0.1 1</ambient>
           <diffuse>0.2 0.2 0.2 1</diffuse>
@@ -281,12 +282,12 @@
 
       <!-- VLP-16 Lidar Sensor -->
       <sensor name="lidar_vlp16" type="gpu_lidar">
-        <gz_frame_id>lidar_sensor_link</gz_frame_id>
         <pose>0 0 0 0 0 0</pose>
+        <gz_frame_id>velodyne</gz_frame_id>
         <topic>/velodyne_points</topic>
         <update_rate>10</update_rate>
         <always_on>true</always_on>
-        <visualize>false</visualize>
+        <visualize>true</visualize>
         <lidar>
           <scan>
             <horizontal>
