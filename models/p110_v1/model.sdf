@@ -11,7 +11,7 @@
           <ixx>50.5</ixx>
           <ixy>-8.5</ixy>
           <ixz>-32.6</ixz>
-          <iyy>-8.5</iyy>
+          <iyy>8.5</iyy>
           <iyz>0.58</iyz>
           <izz>457.8</izz>
         </inertia>
