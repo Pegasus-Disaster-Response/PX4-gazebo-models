@@ -5,15 +5,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>-1.5 0 0.1 0 0 0</pose>
-        <mass>49.9</mass>
+        <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
+        <mass>84.31</mass>
         <inertia>
-          <ixx>50.5</ixx>
-          <ixy>-8.5</ixy>
-          <ixz>-32.6</ixz>
-          <iyy>8.5</iyy>
-          <iyz>0.58</iyz>
-          <izz>457.8</izz>
+          <ixx>85.21</ixx>
+          <ixy>-14.43</ixy>
+          <ixz>-55.16</ixz>
+          <iyy>700.31</iyy>
+          <iyz>0.98</iyz>
+          <izz>772.87</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -41,7 +41,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <!-- <scale>0.001 0.001 0.001</scale> -->
+            <scale>0.001 0.001 0.001</scale>
             <uri>model://p110_v1/meshes/wing.stl</uri>
           </mesh>
         </geometry>
@@ -288,8 +288,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://p110_v1/meshes/prop_cw_visual</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -353,8 +353,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://p110_v1/meshes/prop_cw_visual</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -419,8 +419,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://p110_v1/meshes/prop_cw_visual</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -483,8 +483,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://p110_v1/meshes/prop_cw_visual</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -548,8 +548,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://p110_v1/meshes/prop_cw_visual</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -613,8 +613,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://p110_v1/meshes/prop_cw_visual</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -650,7 +650,7 @@
         <inertia>
           <ixx>0.44</ixx>
           <ixy>0.04</ixy>
-          <iyy>0.01</iyy>
+          <iyy>0.011</iyy>
           <ixz>0.0</ixz>
           <iyz>0.0</iyz>
           <izz>0.45</izz>
@@ -659,7 +659,7 @@
       <visual name='left_elevon_visual'>
         <geometry>
           <mesh>
-            <!-- <scale>0.001 0.001 0.001</scale> -->
+            <scale>0.001 0.001 0.001</scale>
             <uri>model://p110_v1/meshes/flap.stl</uri>
           </mesh>
         </geometry>
@@ -676,7 +676,7 @@
         <inertia>
           <ixx>0.44</ixx>
           <ixy>0.04</ixy>
-          <iyy>0.01</iyy>
+          <iyy>0.011</iyy>
           <ixz>0.0</ixz>
           <iyz>0.0</iyz>
           <izz>0.45</izz>
@@ -685,7 +685,7 @@
       <visual name='right_elevon_visual'>
         <geometry>
           <mesh>
-            <!-- <scale>0.001 0.001 0.001</scale> -->
+            <scale>0.001 0.001 0.001</scale>
             <uri>model://p110_v1/meshes/flap.stl</uri>
           </mesh>
         </geometry>
@@ -705,7 +705,7 @@
           <iyy>0.09</iyy>
           <ixz>0.0</ixz>
           <iyz>0.02</iyz>
-          <izz>0.01</izz>
+          <izz>0.03</izz>
         </inertia>
         <pose>-3.85 0.76 0.44 0 0 0 </pose>
       </inertial>
@@ -713,7 +713,8 @@
         <pose>-3.85 0.76 0.44 0 0 0 </pose>
         <geometry>
           <mesh>
-            <uri>model://p110_v1/meshes/rudder.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <!-- <uri>model://p110_v1/meshes/rudder.stl</uri> -->
           </mesh>
         </geometry>
         <material>
@@ -731,7 +732,7 @@
           <iyy>0.09</iyy>
           <ixz>0.0</ixz>
           <iyz>0.02</iyz>
-          <izz>0.01</izz>
+          <izz>0.03</izz>
         </inertia>
         <pose>-3.85 -0.76 0.44 0 0 0 </pose>
       </inertial>
@@ -739,7 +740,8 @@
         <pose>-3.85 -0.76 0.44 0 0 0 </pose>
         <geometry>
           <mesh>
-            <uri>model://p110_v1/meshes/rudder.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <!-- <uri>model://p110_v1/meshes/rudder.stl</uri> -->
           </mesh>
         </geometry>
         <material>
@@ -754,8 +756,8 @@
         <mass>2.27</mass>
         <inertia>
           <ixx>1.12</ixx>
-          <ixy>0.6</ixy>
-          <iyy>0.02</iyy>
+          <ixy>0.05</ixy>
+          <iyy>0.3</iyy>
           <ixz>0.0</ixz>
           <iyz>0.0</iyz>
           <izz>1.14</izz>
@@ -766,8 +768,8 @@
         <pose> -3.85 0.61 0.52 0.00 0 0.0</pose>
         <geometry>
           <mesh>
-            <scale>0.1 0.1 0.1</scale>
-            <uri>model://p110_v1/meshes/elevator.dae</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <!-- <uri>model://p110_v1/meshes/elevator.stl</uri> -->
           </mesh>
         </geometry>
         <material>
