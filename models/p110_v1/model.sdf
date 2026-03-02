@@ -2,10 +2,12 @@
 <!-- DO NOT EDIT: Generated from p110_v1.sdf.jinja -->
 <sdf version='1.10'>
   <model name='p110_v1'>
+    <pose>0 0 0.5 0 0 0</pose>
     <link name='base_link'>
       <pose>0 0 0 0 0 0</pose>
       <inertial>
         <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
+        <pose>0 0 0 0 0 0</pose>
         <mass>84.31</mass>
         <inertia>
           <ixx>85.21</ixx>
@@ -39,10 +41,11 @@
       </collision>
       <visual name='base_link_visual'>
         <pose>0 0 0 0 0 0</pose>
+        <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/wing.stl</uri>
+            <uri>model://p110_v1/meshes/wing.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -289,7 +292,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
+            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -306,7 +309,7 @@
       <child>rotor_0</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>1 0 0</xyz>
+        <xyz>1 0 0</xyz> <!-- forward thrust -->
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -354,7 +357,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
+            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -371,7 +374,7 @@
       <child>rotor_1</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>1 0 0</xyz>
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -420,7 +423,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
+            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -484,7 +487,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
+            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -549,7 +552,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
+            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -614,7 +617,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/prop_cw.stl</uri>
+            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -660,7 +663,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/flap.stl</uri>
+            <uri>model://p110_v1/meshes/flap.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -686,7 +689,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://p110_v1/meshes/flap.stl</uri>
+            <uri>model://p110_v1/meshes/flap.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -714,7 +717,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <!-- <uri>model://p110_v1/meshes/rudder.stl</uri> -->
+            <uri>model://p110_v1/meshes/rudder.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -741,7 +744,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <!-- <uri>model://p110_v1/meshes/rudder.stl</uri> -->
+            <uri>model://p110_v1/meshes/rudder.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -769,7 +772,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <!-- <uri>model://p110_v1/meshes/elevator.stl</uri> -->
+            <uri>model://p110_v1/meshes/elevator.STL</uri>
           </mesh>
         </geometry>
         <material>
