@@ -5,17 +5,18 @@
     <pose>0 0 0.5 0 0 0</pose>
     <link name='base_link'>
       <pose>0 0 0 0 0 0</pose>
+      <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
       <inertial>
-        <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
-        <pose>0 0 0 0 0 0</pose>
-        <mass>84.31</mass>
+        <pose>-1.5 0 0.1 0 0 0</pose>
+        <!-- <pose>0 0 0 0 0 0</pose> -->
+        <mass>31.05</mass>
         <inertia>
-          <ixx>85.21</ixx>
-          <ixy>-14.43</ixy>
-          <ixz>-55.16</ixz>
-          <iyy>700.31</iyy>
-          <iyz>0.98</iyz>
-          <izz>772.87</izz>
+          <ixx>30.46</ixx>
+          <ixy>-14.33</ixy>
+          <ixz>-28.12</ixz>
+          <iyy>306.21</iyy>
+          <iyz>0.94</iyz>
+          <izz>330.00</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -40,11 +41,10 @@
         </surface>
       </collision>
       <visual name='base_link_visual'>
-        <pose>0 0 0 0 0 0</pose>
         <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/wing.STL</uri>
           </mesh>
         </geometry>
@@ -167,11 +167,11 @@
     <joint name="lidar_sensor_joint" type="fixed">
       <parent>base_link</parent>
       <child>velodyne</child>
-      <pose relative_to="base_link">0 0 0.15 0 0 0</pose>
+      <pose relative_to="base_link">-1.5 0 0.2 0 0 0</pose>
     </joint>
 
     <link name="velodyne">
-      <pose relative_to="base_link">0 0 0.15 0 0 0</pose>
+      <pose relative_to="base_link">-1.5 0 0.2 0 0 0</pose>
       <inertial>
         <mass>0.83</mass>
         <inertia>
@@ -202,12 +202,12 @@
         </geometry>
 
         <material>
-          <ambient>0.1 0.1 0.1 1</ambient>
-          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <ambient>0 0.8 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
         </material>
       </visual>
 
-      <!-- VLP-16 Lidar Sensor -->
+      <!-- VLP-16 high res Lidar Sensor -->
       <sensor name="lidar_vlp16" type="gpu_lidar">
         <pose>0 0 0 0 0 0</pose>
         <gz_frame_id>velodyne</gz_frame_id>
@@ -226,8 +226,8 @@
             <vertical>
               <samples>16</samples>
               <resolution>1</resolution>
-              <min_angle>-0.261799388</min_angle>
-              <max_angle>0.261799388</max_angle>
+              <min_angle>-0.174532925</min_angle>
+              <max_angle>0.174532925</max_angle>
             </vertical>
           </scan>
           <range>
@@ -247,12 +247,12 @@
 <!-- replace with zed x -->
     <include merge='true'>
       <uri>model://better_cam</uri>
-      <pose>.12 .03 .242 0 0 0</pose>
+      <pose>-0.5 .03 .242 0 0 0</pose>
     </include>
     <joint name="CameraJoint" type="fixed">
       <parent>base_link</parent>
       <child>camera_link</child>
-      <pose relative_to="base_link">.12 .03 .242 0 0 0</pose>
+      <pose relative_to="base_link">-0.5 .03 .242 0 0 0</pose>
     </joint>
 
 
@@ -291,7 +291,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
@@ -356,7 +356,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
@@ -374,7 +374,7 @@
       <child>rotor_1</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>0 0 1</xyz>
+        <xyz>1 0 0</xyz>
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -422,7 +422,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
@@ -486,7 +486,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
@@ -551,7 +551,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
@@ -565,7 +565,6 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='left_forward_rotor_joint' type='revolute'>
-      <pose>-1.26 1.68 0.1 0 0 0</pose>
       <child>left_forward_rotor</child>
       <parent>base_link</parent>
       <axis>
@@ -616,7 +615,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
@@ -630,7 +629,6 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='right_forward_rotor_joint' type='revolute'>
-      <pose>-1.26 -1.68 0.1 0 0 0</pose>
       <child>right_forward_rotor</child>
       <parent>base_link</parent>
       <axis>
@@ -662,7 +660,7 @@
       <visual name='left_elevon_visual'>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/flap.STL</uri>
           </mesh>
         </geometry>
@@ -673,7 +671,7 @@
       </visual>
     </link>
     <link name="right_elevon">
-      <pose>-1.75 -2.07 0.12 0.00 0 0.0</pose>
+      <pose>-1.75 -1.30 0.12 0.00 0 0.0</pose> <!-- defines location of the link to base_link origin -->
       <inertial>
         <mass>2.27</mass>
         <inertia>
@@ -684,11 +682,12 @@
           <iyz>0.0</iyz>
           <izz>0.45</izz>
         </inertia>
+
       </inertial>
       <visual name='right_elevon_visual'>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/flap.STL</uri>
           </mesh>
         </geometry>
@@ -700,6 +699,7 @@
     </link>
 
     <link name="left_rudder">
+      <pose>-3.85 0.76 0.44 0 0 0 </pose>
       <inertial>
         <mass>2.27</mass>
         <inertia>
@@ -710,13 +710,11 @@
           <iyz>0.02</iyz>
           <izz>0.03</izz>
         </inertia>
-        <pose>-3.85 0.76 0.44 0 0 0 </pose>
       </inertial>
       <visual name='left_rudder_visual'>
-        <pose>-3.85 0.76 0.44 0 0 0 </pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/rudder.STL</uri>
           </mesh>
         </geometry>
@@ -727,6 +725,7 @@
       </visual>
     </link>
     <link name="right_rudder">
+      <pose>-3.85 -0.76 0.44 0 0 0 </pose>
       <inertial>
         <mass>2.27</mass>
         <inertia>
@@ -737,13 +736,11 @@
           <iyz>0.02</iyz>
           <izz>0.03</izz>
         </inertia>
-        <pose>-3.85 -0.76 0.44 0 0 0 </pose>
       </inertial>
       <visual name='right_rudder_visual'>
-        <pose>-3.85 -0.76 0.44 0 0 0 </pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/rudder.STL</uri>
           </mesh>
         </geometry>
@@ -755,6 +752,7 @@
     </link>
 
     <link name="elevator">
+      <pose> -3.85 0.61 0.52 0.00 0 0.0</pose>
       <inertial>
         <mass>2.27</mass>
         <inertia>
@@ -765,13 +763,11 @@
           <iyz>0.0</iyz>
           <izz>1.14</izz>
         </inertia>
-        <pose> -3.85 0.61 0.52 0.00 0 0.0</pose>
       </inertial>
       <visual name='elevator_visual'>
-        <pose> -3.85 0.61 0.52 0.00 0 0.0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/elevator.STL</uri>
           </mesh>
         </geometry>
@@ -783,9 +779,9 @@
     </link>
 
     <joint name='servo_0' type='revolute'>
+<!-- joint does not need pose, it will rotate at the origin of the child object -->
       <parent>base_link</parent>
       <child>left_elevon</child>
-      <pose>-1.75 2.07 0.12 0.00 0 0.0</pose>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -805,7 +801,6 @@
     <joint name='servo_1' type='revolute'>
       <parent>base_link</parent>
       <child>right_elevon</child>
-      <pose>-1.75 -2.07 0.12 0.00 0 0.0</pose>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -825,7 +820,6 @@
     <joint name='servo_2' type='revolute'>
       <parent>base_link</parent>
       <child>elevator</child>
-      <pose> -3.85 0.61 0.52 0.00 0 0.0</pose>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -845,9 +839,8 @@
     <joint name='servo_3' type='revolute'>
       <parent>base_link</parent>
       <child>left_rudder</child>
-      <pose> -3.85 0.76 0.44 0 0 0</pose>
       <axis>
-        <xyz>0 1 0</xyz>
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-0.52</lower>
           <upper>0.52</upper>
@@ -865,9 +858,8 @@
     <joint name='servo_4' type='revolute'>
       <parent>base_link</parent>
       <child>right_rudder</child>
-      <pose> -3.85 -0.76 0.44 0 0 0</pose>
       <axis>
-        <xyz>0 1 0</xyz>
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-0.52</lower>
           <upper>0.52</upper>
