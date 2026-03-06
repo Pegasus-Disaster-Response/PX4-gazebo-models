@@ -7,7 +7,8 @@
       <pose>0 0 0 0 0 0</pose>
       <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
       <inertial>
-        <pose>-1.65 0 0.23 0 0 0</pose>
+        <!-- <pose>-1.65 0 0.23 0 0 0</pose> -->
+        <pose>-0.8 0 0.23 0 0 0</pose>
         <mass>31.05</mass>
         <inertia>
           <ixx>50.56</ixx>
@@ -19,10 +20,10 @@
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
-        <pose>0 0 -0.07 0 0 0</pose>
+        <pose>-2.5 0 0.1 0 0 0</pose>
         <geometry>
           <box>
-            <size>3.89 4.57 0.93</size>
+            <size>3.89 4.57 1.5</size>
           </box>
         </geometry>
         <surface>
@@ -40,12 +41,14 @@
         </surface>
       </collision>
       <visual name='base_link_visual'>
-        <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
+        <!-- <pose>-2.5 0 0.1 0 0 0</pose> -->
         <geometry>
           <mesh>
-            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/wing.STL</uri>
           </mesh>
+          <!-- <box>
+            <size>3.89 4.57 1</size>
+          </box> -->
         </geometry>
         <material>
           <ambient>.175 .175 .175 1.0</ambient>
@@ -246,19 +249,19 @@
 <!-- replace with zed x -->
     <include merge='true'>
       <uri>model://better_cam</uri>
-      <pose>-0.5 .03 .242 0 0 0</pose>
+      <pose>-0.7 .03 0 0 0 0</pose>
     </include>
     <joint name="CameraJoint" type="fixed">
       <parent>base_link</parent>
       <child>camera_link</child>
-      <pose relative_to="base_link">-0.5 .03 .242 0 0 0</pose>
+      <pose relative_to="base_link">-0.7 .03 0 0 0 0</pose>
     </joint>
 
 
     <link name='rotor_0'>
-      <pose>-0.59 -0.76 0.16 0 1.57 0</pose>
+      <pose>-0.59 -0.76 0.16 0 0 0</pose>
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <mass>0.43</mass>
         <inertia>
           <ixx>0.03</ixx>
@@ -270,7 +273,7 @@
         </inertia>
       </inertial>
       <collision name='rotor_0_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>1.08</length>
@@ -287,10 +290,9 @@
         </surface>
       </collision>
       <visual name='rotor_0_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <mesh>
-            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
@@ -308,7 +310,7 @@
       <child>rotor_0</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>1 0 0</xyz> <!-- forward thrust -->
+        <xyz>0 0 1</xyz> <!-- vertical thrust (lift) -->
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -321,9 +323,9 @@
     </joint>
 
     <link name='rotor_1'>
-      <pose>-2.59 0.76 0.16 0 1.57 0</pose>
+      <pose>-2.59 0.76 0.16 0 0 0</pose>
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <mass>0.43</mass>
         <inertia>
           <ixx>0.03</ixx>
@@ -335,7 +337,7 @@
         </inertia>
       </inertial>
       <collision name='rotor_1_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>1.08</length>
@@ -352,7 +354,7 @@
         </surface>
       </collision>
       <visual name='rotor_1_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
@@ -373,7 +375,7 @@
       <child>rotor_1</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>1 0 0</xyz>
+        <xyz>0 0 1</xyz> <!-- vertical thrust (lift) -->
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -385,11 +387,10 @@
       </axis>
     </joint>
 
-    <!-- here ! -->
     <link name='rotor_2'>
-      <pose>-0.59 0.76 0.16 0 1.57 0</pose>
+      <pose>-0.59 0.76 0.16 0 0 0</pose>
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <mass>0.43</mass>
         <inertia>
           <ixx>0.03</ixx>
@@ -401,7 +402,7 @@
         </inertia>
       </inertial>
       <collision name='rotor_2_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>1.08</length>
@@ -418,12 +419,15 @@
         </surface>
       </collision>
       <visual name='rotor_2_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <mesh>
-            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
+          <!-- <cylinder>
+            <length>1.08</length>
+            <radius>0.1</radius>
+          </cylinder> -->
         </geometry>
         <material>
           <ambient>0 0 1 1.0</ambient>
@@ -439,7 +443,7 @@
       <child>rotor_2</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>1 0 0</xyz>
+        <xyz>0 0 1</xyz> <!-- vertical thrust (lift) -->
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -451,9 +455,9 @@
       </axis>
     </joint>
     <link name='rotor_3'>
-      <pose>-2.59 -0.76 0.16 0 1.57 0</pose>
+      <pose>-2.59 -0.76 0.16 0 0 0</pose>
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <mass>0.43</mass>
         <inertia>
           <ixx>0.03</ixx>
@@ -465,7 +469,7 @@
         </inertia>
       </inertial>
       <collision name='rotor_3_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>1.08</length>
@@ -482,7 +486,7 @@
         </surface>
       </collision>
       <visual name='rotor_3_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
@@ -503,7 +507,7 @@
       <child>rotor_3</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>1 0 0</xyz>
+        <xyz>0 0 1</xyz> <!-- vertical thrust (lift) -->
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -547,12 +551,15 @@
         </surface>
       </collision>
       <visual name='left_forward_rotor_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 1.57 0 0</pose>
         <geometry>
           <mesh>
-            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
+          <!-- <cylinder>
+            <length>1.08</length>
+            <radius>0.1</radius>
+          </cylinder> -->
         </geometry>
         <material>
           <ambient>0 0 1 1.0</ambient>
@@ -611,12 +618,15 @@
         </surface>
       </collision>
       <visual name='right_forward_rotor_visual'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 1.57 0 0</pose>
         <geometry>
           <mesh>
-            <!-- <scale>0.001 0.001 0.001</scale> -->
             <uri>model://p110_v1/meshes/prop_cw.STL</uri>
           </mesh>
+          <!-- <cylinder>
+            <length>1.08</length>
+            <radius>0.1</radius>
+          </cylinder> -->
         </geometry>
         <material>
           <ambient>0 0 1 1.0</ambient>
@@ -757,7 +767,7 @@
     <link name="elevator">
       <pose> -3.85 0.61 0.52 0.00 0 0.0</pose>
       <inertial>
-        <mass>2.27</mass>
+        <mass>1.27</mass> <!-- made lighter to improve hover -->
         <pose>-0.05 -0.61 0 0 0 0</pose>
         <inertia>
           <ixx>0.28</ixx>
@@ -880,7 +890,7 @@
     </joint>
 <!-- here -->
 <!-- Main wing lift/drag -->
-    <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+    <!-- <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
       <a0>0.08</a0>
       <cla>4.8</cla>
       <cda>0.055</cda>
@@ -895,10 +905,10 @@
       <forward>1 0 0</forward>
       <upward>0 0 1</upward>
       <link_name>base_link</link_name>
-    </plugin>
+    </plugin> -->
 
 <!-- servo and lift drag for left elevon-->
-    <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+    <!-- <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
       <a0>0.0</a0>
       <cla>4.5</cla>
       <cda>0.15</cda>
@@ -924,7 +934,7 @@
       <p_gain>12.0</p_gain>
       <i_gain>0.5</i_gain>
       <d_gain>3.0</d_gain>
-    </plugin>
+    </plugin> -->
 
 <!-- servo and lift drag for right elevon-->
     <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
@@ -1051,7 +1061,7 @@
       <timeConstantUp>0.015</timeConstantUp>
       <timeConstantDown>0.030</timeConstantDown>
       <maxRotVelocity>1400</maxRotVelocity>
-      <motorConstant>4.8e-05</motorConstant>
+      <motorConstant>1.2e-04</motorConstant>
       <momentConstant>0.09</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>0</motorNumber>
@@ -1068,7 +1078,7 @@
       <timeConstantUp>0.015</timeConstantUp>
       <timeConstantDown>0.030</timeConstantDown>
       <maxRotVelocity>1400</maxRotVelocity>
-      <motorConstant>4.8e-05</motorConstant>
+      <motorConstant>1.2e-04</motorConstant>
       <momentConstant>0.09</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>1</motorNumber>
@@ -1086,7 +1096,7 @@
       <timeConstantUp>0.015</timeConstantUp>
       <timeConstantDown>0.030</timeConstantDown>
       <maxRotVelocity>1400</maxRotVelocity>
-      <motorConstant>4.8e-05</motorConstant>
+      <motorConstant>1.2e-04</motorConstant>
       <momentConstant>0.09</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>2</motorNumber>
@@ -1104,7 +1114,7 @@
       <timeConstantUp>0.015</timeConstantUp>
       <timeConstantDown>0.030</timeConstantDown>
       <maxRotVelocity>1400</maxRotVelocity>
-      <motorConstant>4.8e-05</motorConstant>
+      <motorConstant>1.2e-04</motorConstant>
       <momentConstant>0.09</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>3</motorNumber>
@@ -1120,7 +1130,7 @@
       name="gz::sim::systems::MulticopterMotorModel">
       <jointName>left_forward_rotor_joint</jointName>
       <linkName>left_forward_rotor</linkName>
-      <turningDirection>cw</turningDirection>
+      <turningDirection>ccw</turningDirection>
       <timeConstantUp>0.020</timeConstantUp>
       <timeConstantDown>0.035</timeConstantDown>
       <maxRotVelocity>280</maxRotVelocity>
@@ -1138,7 +1148,7 @@
       name="gz::sim::systems::MulticopterMotorModel">
       <jointName>right_forward_rotor_joint</jointName>
       <linkName>right_forward_rotor</linkName>
-      <turningDirection>ccw</turningDirection>
+      <turningDirection>cw</turningDirection>
       <timeConstantUp>0.020</timeConstantUp>
       <timeConstantDown>0.035</timeConstantDown>
       <maxRotVelocity>280</maxRotVelocity>
