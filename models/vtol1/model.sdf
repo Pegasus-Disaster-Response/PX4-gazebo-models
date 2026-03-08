@@ -280,7 +280,7 @@
         </material>
       </visual>
 
-      <!-- VLP-16 Lidar Sensor -->
+      <!-- VLP-16 high res Lidar Sensor -->
       <sensor name="lidar_vlp16" type="gpu_lidar">
         <pose>0 0 0 0 0 0</pose>
         <gz_frame_id>velodyne</gz_frame_id>
@@ -299,8 +299,8 @@
             <vertical>
               <samples>16</samples>
               <resolution>1</resolution>
-              <min_angle>-0.261799388</min_angle>
-              <max_angle>0.261799388</max_angle>
+              <min_angle>-0.174532925</min_angle>
+              <max_angle>0.174532925</max_angle>
             </vertical>
           </scan>
           <range>
