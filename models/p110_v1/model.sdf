@@ -7,8 +7,8 @@
       <pose>0 0 0 0 0 0</pose>
       <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
       <inertial>
-        <!-- <pose>-1.65 0 0.23 0 0 0</pose> -->
-        <pose>-0.8 0 0.23 0 0 0</pose>
+        <pose>-1.14 0 0.23 0 0 0</pose>
+        <!-- <pose>-0.8 0 0.23 0 0 0</pose> -->
         <mass>31.05</mass>
         <inertia>
           <ixx>50.56</ixx>
@@ -890,7 +890,7 @@
     </joint>
 <!-- here -->
 <!-- Main wing lift/drag -->
-    <!-- <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+    <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
       <a0>0.08</a0>
       <cla>4.8</cla>
       <cda>0.055</cda>
@@ -905,10 +905,10 @@
       <forward>1 0 0</forward>
       <upward>0 0 1</upward>
       <link_name>base_link</link_name>
-    </plugin> -->
+    </plugin>
 
 <!-- servo and lift drag for left elevon-->
-    <!-- <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+    <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
       <a0>0.0</a0>
       <cla>4.5</cla>
       <cda>0.15</cda>
@@ -934,7 +934,7 @@
       <p_gain>12.0</p_gain>
       <i_gain>0.5</i_gain>
       <d_gain>3.0</d_gain>
-    </plugin> -->
+    </plugin>
 
 <!-- servo and lift drag for right elevon-->
     <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
