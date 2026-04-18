@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- DO NOT EDIT: Generated from p110_v1.sdf.jinja -->
+<!-- DO NOT EDIT: Generated from p110_v2.sdf.jinja -->
 <sdf version='1.10'>
   <model name='p110_v1'>
     <pose>0 0 0.5 0 0 0</pose>
@@ -44,7 +44,7 @@
         <!-- <pose>-2.5 0 0.1 0 0 0</pose> -->
         <geometry>
           <mesh>
-            <uri>model://p110_v1/meshes/wing.STL</uri>
+            <uri>model://p110_v2/meshes/wing.STL</uri>
           </mesh>
           <!-- <box>
             <size>3.89 4.57 1</size>
@@ -358,7 +358,7 @@
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
-            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
+            <uri>model://p110_v2/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -422,7 +422,7 @@
         <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <mesh>
-            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
+            <uri>model://p110_v2/meshes/prop_cw.STL</uri>
           </mesh>
           <!-- <cylinder>
             <length>1.08</length>
@@ -490,7 +490,7 @@
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
-            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
+            <uri>model://p110_v2/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -554,7 +554,7 @@
         <pose>0 0 0 1.57 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
+            <uri>model://p110_v2/meshes/prop_cw.STL</uri>
           </mesh>
           <!-- <cylinder>
             <length>1.08</length>
@@ -621,7 +621,7 @@
         <pose>0 0 0 1.57 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
+            <uri>model://p110_v2/meshes/prop_cw.STL</uri>
           </mesh>
           <!-- <cylinder>
             <length>1.08</length>
@@ -671,7 +671,7 @@
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
-            <uri>model://p110_v1/meshes/flap.STL</uri>
+            <uri>model://p110_v2/meshes/flap.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -699,7 +699,7 @@
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
-            <uri>model://p110_v1/meshes/flap.STL</uri>
+            <uri>model://p110_v2/meshes/flap.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -727,7 +727,7 @@
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
-            <uri>model://p110_v1/meshes/rudder.STL</uri>
+            <uri>model://p110_v2/meshes/rudder.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -754,7 +754,7 @@
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
-            <uri>model://p110_v1/meshes/rudder.STL</uri>
+            <uri>model://p110_v2/meshes/rudder.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -782,7 +782,7 @@
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
-            <uri>model://p110_v1/meshes/elevator.STL</uri>
+            <uri>model://p110_v2/meshes/elevator.STL</uri>
           </mesh>
         </geometry>
         <material>
