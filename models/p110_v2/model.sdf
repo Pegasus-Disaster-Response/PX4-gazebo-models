@@ -654,7 +654,7 @@
     </joint>
 
     <link name="left_elevon">
-      <pose>-1.75 2.07 0.12 0.00 0 0.0</pose>
+      <pose>-0.153 2.04 -0.108 0.00 0 0.0</pose>
       <inertial>
         <mass>2.27</mass>
         <pose>-0.05 -0.38 0 0 0 0</pose>
@@ -668,6 +668,7 @@
         </inertia>
       </inertial>
       <visual name='left_elevon_visual'>
+       <pose>0 0 0 1.5708 0 1.5708</pose>
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
@@ -681,7 +682,7 @@
       </visual>
     </link>
     <link name="right_elevon">
-      <pose>-1.75 -1.30 0.12 0.00 0 0.0</pose> <!-- defines location of the link to base_link origin -->
+      <pose>-0.153 -1.28 -0.108 0.00 0 0.0</pose> <!-- defines location of the link to base_link origin -->
       <inertial>
         <mass>2.27</mass>
         <pose>-0.05 -0.38 0 0 0 0</pose>
@@ -696,6 +697,7 @@
 
       </inertial>
       <visual name='right_elevon_visual'>
+        <pose>0 0 0 1.5708 0 1.5708</pose>
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
@@ -710,7 +712,7 @@
     </link>
 
     <link name="left_rudder">
-      <pose>-3.85 0.76 0.44 0 0 0 </pose>
+      <pose>-1.925 0.76 -0.1538 0 0 0 </pose>
       <inertial>
         <mass>2.27</mass>
         <pose>-0.04 0 -0.18 0 0 0</pose>
@@ -724,6 +726,7 @@
         </inertia>
       </inertial>
       <visual name='left_rudder_visual'>
+          <pose>0 0 0 0 0 3.1216</pose>
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
@@ -737,7 +740,7 @@
       </visual>
     </link>
     <link name="right_rudder">
-      <pose>-3.85 -0.76 0.44 0 0 0 </pose>
+      <pose>-1.925 -0.76 -0.1538 0 0 0 </pose>
       <inertial>
         <mass>2.27</mass>
         <pose>-0.04 0 -0.18 0 0 0</pose>
@@ -751,6 +754,7 @@
         </inertia>
       </inertial>
       <visual name='right_rudder_visual'>
+          <pose>0 0 0 0 0 3.1216</pose>
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
@@ -765,7 +769,7 @@
     </link>
 
     <link name="elevator">
-      <pose> -3.85 0.61 0.52 0.00 0 0.0</pose>
+      <pose> -1.925 0.606 0.295 0.00 0 0.0</pose>
       <inertial>
         <mass>1.27</mass> <!-- made lighter to improve hover -->
         <pose>-0.05 -0.61 0 0 0 0</pose>
@@ -779,6 +783,7 @@
         </inertia>
       </inertial>
       <visual name='elevator_visual'>
+          <pose>0 0 0 1.5708 3.1416 0</pose>
         <geometry>
           <mesh>
             <!-- <scale>0.001 0.001 0.001</scale> -->
