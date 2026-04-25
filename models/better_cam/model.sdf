@@ -20,7 +20,7 @@
       <visual name="mono_cam/visual/housing">
         <geometry>
           <box>
-            <size>0.02 0.04 0.04</size>
+            <size>0.033 0.175 0.03</size>
           </box>
         </geometry>
       </visual>

@@ -7,23 +7,23 @@
       <pose>0 0 0 0 0 0</pose>
       <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
       <inertial>
-        <pose>-1.14 0 0.23 0 0 0</pose>
+        <pose>0 0 -0.2 0 0 0</pose>
         <!-- <pose>-0.8 0 0.23 0 0 0</pose> -->
-        <mass>31.05</mass>
+        <mass>46.0</mass>
         <inertia>
-          <ixx>50.56</ixx>
-          <ixy>7.71</ixy>
-          <ixz>-8.16</ixz>
-          <iyy>70.79</iyy>
-          <iyz>-0.88</iyz>
-          <izz>117.69</izz>
+          <ixx>14.77</ixx>
+          <ixy>-0.01</ixy>
+          <ixz>-6.52</ixz>
+          <iyy>36.47</iyy>
+          <iyz>0.00</iyz>
+          <izz>45.82</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
-        <pose>-2 0 0.1 0 0 0</pose>
+        <pose>-0.5 0 0.2 0 0 0</pose>
         <geometry>
           <box>
-            <size>3.89 4.57 2</size>
+            <size>3.89 4.57 1.8</size>
           </box>
         </geometry>
         <surface>
@@ -169,11 +169,11 @@
     <joint name="lidar_sensor_joint" type="fixed">
       <parent>base_link</parent>
       <child>velodyne</child>
-      <pose relative_to="base_link">-1.5 0 0.2 0 0 0</pose>
+      <pose relative_to="base_link">0 0 -0.036 0 0 0</pose>
     </joint>
 
     <link name="velodyne">
-      <pose relative_to="base_link">-1.5 0 0.2 0 0 0</pose>
+      <pose relative_to="base_link">0 0 -0.036 0 0 0</pose>
       <inertial>
         <mass>0.83</mass>
         <inertia>
@@ -198,7 +198,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.0516</radius>
+            <radius>0.06</radius>
             <length>0.0717</length>
           </cylinder>
         </geometry>
@@ -249,19 +249,18 @@
 <!-- replace with zed x -->
     <include merge='true'>
       <uri>model://better_cam</uri>
-      <pose>-0.7 0 0 0 0 0</pose>
+      <pose>0.97 0 -0.26 0 0 0</pose>
     </include>
     <joint name="CameraJoint" type="fixed">
       <parent>base_link</parent>
       <child>camera_link</child>
-      <pose relative_to="base_link">-0.7 0 0 0 0 0</pose>
+      <pose relative_to="base_link">0.97 0 -0.26 0 0 0</pose>
     </joint>
 
-
     <link name='rotor_0'>
-      <pose>0.89 -0.76 -0.09 0 0 0</pose>
+      <pose>0.89 -0.76 -0.08 0 0 0</pose>
       <inertial>
-        <pose>0 0 0 0 1.57 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <mass>0.43</mass>
         <inertia>
           <ixx>0.03</ixx>
@@ -273,7 +272,7 @@
         </inertia>
       </inertial>
       <collision name='rotor_0_collision'>
-        <pose>0 0 0 0 1.57 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
             <length>1.08</length>
@@ -290,10 +289,10 @@
         </surface>
       </collision>
       <visual name='rotor_0_visual'>
-        <pose>0 0 0 0 1.57 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://p110_v1/meshes/prop_cw.STL</uri>
+            <uri>model://p110_v2/meshes/prop_cw.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -323,7 +322,7 @@
     </joint>
 
     <link name='rotor_1'>
-      <pose>0.89 0.76 -0.09 0 0 0</pose>
+      <pose>-0.645 0.76 -0.08 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.43</mass>
@@ -388,7 +387,7 @@
     </joint>
 
     <link name='rotor_2'>
-      <pose>-0.645 -0.76 -0.09 0 0 0</pose>
+      <pose>0.89 0.76 -0.08 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.43</mass>
@@ -455,7 +454,7 @@
       </axis>
     </joint>
     <link name='rotor_3'>
-      <pose>-0.645 0.76 -0.09 0 0 0</pose>
+      <pose>-0.645 -0.76 -0.08 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.43</mass>
@@ -537,7 +536,7 @@
         <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>1.08</length>
+            <length>0.76</length>
             <radius>0.1</radius>
           </cylinder>
         </geometry>
@@ -555,6 +554,7 @@
         <geometry>
           <mesh>
             <uri>model://p110_v2/meshes/prop_cw.STL</uri>
+            <scale>0.7 0.7 0.7</scale>
           </mesh>
           <!-- <cylinder>
             <length>1.08</length>
@@ -604,7 +604,7 @@
         <pose>0 0 0 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>1.08</length>
+            <length>0.76</length>
             <radius>0.1</radius>
           </cylinder>
         </geometry>
@@ -622,6 +622,7 @@
         <geometry>
           <mesh>
             <uri>model://p110_v2/meshes/prop_cw.STL</uri>
+            <scale>0.7 0.7 0.7</scale>
           </mesh>
           <!-- <cylinder>
             <length>1.08</length>
@@ -654,9 +655,9 @@
     </joint>
 
     <link name="left_elevon">
-      <pose>-0.153 2.04 -0.108 0.00 0 0.0</pose>
+      <pose>-0.153 2.04 -0.12 0.00 0 0.0</pose>
       <inertial>
-        <mass>2.27</mass>
+        <mass>0.91</mass>
         <pose>-0.05 -0.38 0 0 0 0</pose>
         <inertia>
           <ixx>0.01</ixx>
@@ -682,9 +683,9 @@
       </visual>
     </link>
     <link name="right_elevon">
-      <pose>-0.153 -1.28 -0.108 0.00 0 0.0</pose> <!-- defines location of the link to base_link origin -->
+      <pose>-0.153 -1.27 -0.12 0.00 0 0.0</pose> <!-- defines location of the link to base_link origin -->
       <inertial>
-        <mass>2.27</mass>
+        <mass>0.91</mass>
         <pose>-0.05 -0.38 0 0 0 0</pose>
         <inertia>
           <ixx>0.01</ixx>
@@ -714,7 +715,7 @@
     <link name="left_rudder">
       <pose>-1.925 0.76 -0.1538 0 0 0 </pose>
       <inertial>
-        <mass>2.27</mass>
+        <mass>2</mass>
         <pose>-0.04 0 -0.18 0 0 0</pose>
         <inertia>
           <ixx>0.02</ixx>
@@ -742,7 +743,7 @@
     <link name="right_rudder">
       <pose>-1.925 -0.76 -0.1538 0 0 0 </pose>
       <inertial>
-        <mass>2.27</mass>
+        <mass>2</mass>
         <pose>-0.04 0 -0.18 0 0 0</pose>
         <inertia>
           <ixx>0.02</ixx>
@@ -771,7 +772,7 @@
     <link name="elevator">
       <pose> -1.925 0.606 0.295 0.00 0 0.0</pose>
       <inertial>
-        <mass>1.27</mass> <!-- made lighter to improve hover -->
+        <mass>1.88</mass>
         <pose>-0.05 -0.61 0 0 0 0</pose>
         <inertia>
           <ixx>0.28</ixx>
