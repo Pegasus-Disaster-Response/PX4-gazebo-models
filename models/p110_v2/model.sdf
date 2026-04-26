@@ -7,9 +7,8 @@
       <pose>0 0 0 0 0 0</pose>
       <!-- <pose>-1.5 0 0.1 0 0 0</pose> -->
       <inertial>
-        <pose>0 0 -0.2 0 0 0</pose>
-        <!-- <pose>-0.8 0 0.23 0 0 0</pose> -->
-        <mass>46.0</mass>
+        <pose>0.3 0 -0.2 0 0 0</pose>
+        <mass>40.0</mass>
         <inertia>
           <ixx>14.77</ixx>
           <ixy>-0.01</ixy>
@@ -522,7 +521,7 @@
       <pose>0.383 1.766 -0.205 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 1.57 0</pose>
-        <mass>0.43</mass>
+        <mass>0.1</mass>
         <inertia>
           <ixx>0.03</ixx>
           <ixy>0</ixy>
@@ -590,7 +589,7 @@
       <pose>0.383 -1.766 -0.205 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 1.57 0</pose>
-        <mass>0.43</mass>
+        <mass>0.1</mass>
         <inertia>
           <ixx>0.03</ixx>
           <ixy>0</ixy>
@@ -772,7 +771,7 @@
     <link name="elevator">
       <pose> -1.925 0.606 0.295 0.00 0 0.0</pose>
       <inertial>
-        <mass>1.88</mass>
+        <mass>1.2</mass>
         <pose>-0.05 -0.61 0 0 0 0</pose>
         <inertia>
           <ixx>0.28</ixx>
@@ -897,10 +896,10 @@
 <!-- here -->
 <!-- Main wing lift/drag -->
     <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
-      <a0>0.08</a0>
-      <cla>4.8</cla>
-      <cda>0.055</cda>
-      <cma>-0.15</cma>
+      <a0>-0.1535</a0>
+      <cla>5.18</cla>
+      <cda>0.576</cda>
+      <cma>-1.262</cma>
       <alpha_stall>0.27</alpha_stall>
       <cla_stall>-0.68</cla_stall>
       <cda_stall>1.2</cda_stall>
